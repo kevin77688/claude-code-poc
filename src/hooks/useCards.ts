@@ -121,7 +121,8 @@ export function useCards(): UseCardsResult {
   const [error, setError] = useState<string | null>(null);
 
   const lang = i18n.language;
-  const jsonPath = lang.startsWith('zh') ? '/cards_cht.json' : '/cards_en.json';
+  const base = import.meta.env.BASE_URL;
+  const jsonPath = lang.startsWith('zh') ? `${base}cards_cht.json` : `${base}cards_en.json`;
 
   const loadCards = useCallback(
     async (bypassCache = false) => {
