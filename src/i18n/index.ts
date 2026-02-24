@@ -1,0 +1,192 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+const resources = {
+  en: {
+    translation: {
+      appTitle: 'Shadowverse Rankings',
+      nav: {
+        rankings: 'Rankings',
+        tierList: 'Tier List',
+        strategy: 'Strategy',
+      },
+      lang: {
+        toggle: '繁中',
+      },
+      filter: {
+        allClasses: 'All Classes',
+        cost: 'Cost',
+        rarity: 'Rarity',
+        search: 'Search cards...',
+        sortBy: 'Sort By',
+        sortOptions: {
+          rank: 'Rank',
+          cost: 'Cost',
+          atk: 'Attack',
+          life: 'Life',
+          name: 'Name',
+        },
+        rarityOptions: {
+          all: 'All Rarities',
+          bronze: 'Bronze',
+          silver: 'Silver',
+          gold: 'Gold',
+          legendary: 'Legendary',
+        },
+        costAll: 'All',
+      },
+      classes: {
+        Forestcraft: 'Forestcraft',
+        Swordcraft: 'Swordcraft',
+        Runecraft: 'Runecraft',
+        Dragoncraft: 'Dragoncraft',
+        Shadowcraft: 'Shadowcraft',
+        Bloodcraft: 'Bloodcraft',
+        Havencraft: 'Havencraft',
+        Portalcraft: 'Portalcraft',
+      },
+      tier: {
+        label: 'Tier',
+        S: 'S Tier',
+        A: 'A Tier',
+        B: 'B Tier',
+        C: 'C Tier',
+        D: 'D Tier',
+      },
+      card: {
+        cost: 'Cost',
+        atk: 'ATK',
+        life: 'Life',
+        class: 'Class',
+        rarity: 'Rarity',
+        type: 'Type',
+        tribe: 'Tribe',
+        set: 'Set',
+        skill: 'Skill',
+        score: 'Score',
+        rankingTier: 'Ranking Tier',
+        stats: 'Stats',
+        details: 'Details',
+        follower: 'Follower',
+        spell: 'Spell',
+        amulet: 'Amulet',
+      },
+      strategy: {
+        title: 'Class Strategies',
+        archetype: 'Archetype',
+        keyCards: 'Key Cards',
+        tips: 'Strategy Tips',
+        recommended: 'Recommended',
+      },
+      tierList: {
+        title: 'Tier List',
+        allClasses: 'All Classes',
+      },
+      state: {
+        loading: 'Loading card data...',
+        error: 'Failed to load cards',
+        noCards: 'No cards found',
+        retry: 'Retry',
+      },
+    },
+  },
+  'zh-TW': {
+    translation: {
+      appTitle: '闇影詩章 卡牌排名',
+      nav: {
+        rankings: '排名',
+        tierList: '階級列表',
+        strategy: '策略',
+      },
+      lang: {
+        toggle: 'EN',
+      },
+      filter: {
+        allClasses: '所有職業',
+        cost: '費用',
+        rarity: '稀有度',
+        search: '搜尋卡牌...',
+        sortBy: '排序',
+        sortOptions: {
+          rank: '排名',
+          cost: '費用',
+          atk: '攻擊力',
+          life: '生命值',
+          name: '名稱',
+        },
+        rarityOptions: {
+          all: '所有稀有度',
+          bronze: '青銅',
+          silver: '白銀',
+          gold: '黃金',
+          legendary: '傳說',
+        },
+        costAll: '全部',
+      },
+      classes: {
+        Forestcraft: '精靈',
+        Swordcraft: '皇家護衛',
+        Runecraft: '巫師',
+        Dragoncraft: '龍族',
+        Shadowcraft: '死靈法師',
+        Bloodcraft: '吸血鬼',
+        Havencraft: '主教',
+        Portalcraft: '超越者',
+      },
+      tier: {
+        label: '階級',
+        S: 'S 階',
+        A: 'A 階',
+        B: 'B 階',
+        C: 'C 階',
+        D: 'D 階',
+      },
+      card: {
+        cost: '費用',
+        atk: '攻擊',
+        life: '生命',
+        class: '職業',
+        rarity: '稀有度',
+        type: '類型',
+        tribe: '種族',
+        set: '系列',
+        skill: '技能',
+        score: '評分',
+        rankingTier: '排名階級',
+        stats: '數值',
+        details: '詳細資訊',
+        follower: '從者',
+        spell: '法術',
+        amulet: '護符',
+      },
+      strategy: {
+        title: '職業策略',
+        archetype: '原型',
+        keyCards: '核心卡牌',
+        tips: '策略要點',
+        recommended: '推薦',
+      },
+      tierList: {
+        title: '階級列表',
+        allClasses: '所有職業',
+      },
+      state: {
+        loading: '正在載入卡牌資料...',
+        error: '載入卡牌失敗',
+        noCards: '找不到卡牌',
+        retry: '重試',
+      },
+    },
+  },
+};
+
+i18n.use(initReactI18next).init({
+  resources,
+  lng: 'en',
+  fallbackLng: 'en',
+  interpolation: {
+    escapeValue: false,
+  },
+});
+
+export default i18n;
